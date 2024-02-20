@@ -10,6 +10,11 @@ public class Tester {
         System.out.print("Введите второе число: ");
         Double b = scanner.nextDouble();
         AbsoluteValueComparator<Double> comparatorTester = new AbsoluteValueComparator<>();
-        System.out.print(comparatorTester.doCompare(a, b));
+        int result = comparatorTester.compare(a, b);
+        switch (result) {
+            case 1 -> System.out.print("Первое число больше");
+            case -1 -> System.out.print("Второе число больше");
+            case 0 -> System.out.print("Числа равны");
+        }
     }
 }
